@@ -1,0 +1,9 @@
+#! /bin/sh
+
+# Make sure we have exactly 3 command line arguments
+if [ $# -ne 3 ]; then
+    echo "Usage: \"plan <domain_file> <problem_file> <result_file>\""
+    exit 1
+fi
+# run the actual planner at the right location
+$(readlink -f "$(which arvand-herd-planner-script)") "$1" "$2" "$3"
