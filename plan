@@ -1,10 +1,10 @@
 #! /bin/sh
 
 # Paths to planner components
-TRANSLATE="$(dirname $(which arvand-herd-planner))/arvand_herd/translate/translate.py"
-PREPROCESS="$(dirname $(which arvand-herd-planner))/arvand_herd/preprocess/preprocess"
-SEARCH="$(dirname $(which arvand-herd-planner))/arvand_herd/search/release-search"
-CONFIGFILE="$(dirname $(which arvand-herd-planner))/arvand_herd/arvand-herd-sat_conf"
+TRANSLATE="$(dirname $(which arvand_herd-planner))/arvand_herd/translate/translate.py"
+PREPROCESS="$(dirname $(which arvand_herd-planner))/arvand_herd/preprocess/preprocess"
+SEARCH="$(dirname $(which arvand_herd-planner))/arvand_herd/search/release-search"
+CONFIGFILE="$(dirname $(which arvand_herd-planner))/arvand_herd/arvand_herd-sat_conf"
 
 run_planner() {
     echo "1. Running translator"
