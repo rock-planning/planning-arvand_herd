@@ -1,8 +1,0 @@
-#! /bin/sh
-
-cd preprocess && \
-(make || exit 1)
-cd .. && \
-cd search && \
-(make release || exit 1)
-cd ..

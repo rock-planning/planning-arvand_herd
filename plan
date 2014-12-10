@@ -1,10 +1,10 @@
 #! /bin/sh
 
 # Paths to planner components
-TRANSLATE="$(dirname $(readlink -f $(which arvand-herd-planner)))/translate/translate.py"
-PREPROCESS="$(dirname $(readlink -f $(which arvand-herd-planner)))/preprocess/preprocess"
-SEARCH="$(dirname $(readlink -f $(which arvand-herd-planner)))/search/release-search"
-CONFIGFILE="$(dirname $(readlink -f $(which arvand-herd-planner)))/configs"
+TRANSLATE="$(dirname $(which arvand-herd-planner))/arvand_herd/translate/translate.py"
+PREPROCESS="$(dirname $(which arvand-herd-planner))/arvand_herd/preprocess/preprocess"
+SEARCH="$(dirname $(which arvand-herd-planner))/arvand_herd/search/release-search"
+CONFIGFILE="$(dirname $(which arvand-herd-planner))/arvand_herd/arvand-herd-sat_conf"
 
 run_planner() {
     echo "1. Running translator"
@@ -12,7 +12,7 @@ run_planner() {
     echo "2. Running preprocessor"
     "$PREPROCESS" < output.sas
     echo "3. Running search"
-    "$SEARCH" "-seed" "1983" "-iterative" "-conf_file" "$(dirname $(readlink -f $(which arvand-herd-planner)))/sat_conf" "-g" all.groups "-o" "$3" < output
+    "$SEARCH" "-seed" "1983" "-iterative" "-conf_file" "$CONFIGFILE" "-g" all.groups "-o" "$3" < output
 }
 
 check_input_files() {
