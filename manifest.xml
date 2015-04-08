@@ -5,7 +5,7 @@
       build infrastructure.
   </description>
   <author>Petre Munteanu/petre_virgil.munteanu@dfki.de</author>
-  <author>Thomas Roehr/thomas.roehr@dfki.de</author>
+  <maintainer>Thomas Roehr/thomas.roehr@dfki.de</maintainer>
   <license>GPL</license>
   <url>http://helios.hud.ac.uk/scommv/IPC-14/repo_planners/seq-sat.zip</url>
   <depend package="base/cmake" />
